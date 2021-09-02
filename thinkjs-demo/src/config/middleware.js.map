@@ -1,0 +1,33 @@
+{
+    "version": 3,
+    "sources": [
+        "middleware.js"
+    ],
+    "names": [
+        "path",
+        "require",
+        "isDev",
+        "think",
+        "env",
+        "module",
+        "exports",
+        "handle",
+        "options",
+        "logRequest",
+        "sendResponseTime",
+        "enable",
+        "root",
+        "join",
+        "ROOT_PATH",
+        "publicPath",
+        "isCli",
+        "debug",
+        "keepExtensions",
+        "limit"
+    ],
+    "mappings": "AAAA;;AAEA,MAAMA,IAAI,GAAGC,OAAO,CAAC,MAAD,CAApB;;AAEA,MAAMC,KAAK,GAAGC,KAAK,CAACC,GAAN,KAAc,aAA5B;AACAC,MAAM,CAACC,OAAP,GAAiB,CAAC;AAChBC,EAAAA,MAAM,EAAE,MADQ;AAEhBC,EAAAA,OAAO,EAAE;AACPC,IAAAA,UAAU,EAAEP,KADL;AAEPQ,IAAAA,gBAAgB,EAAER;AAFX;AAFO,CAAD,EAMd;AACDK,EAAAA,MAAM,EAAE,UADP;AAEDI,EAAAA,MAAM,EAAET,KAFP;AAGDM,EAAAA,OAAO,EAAE;AACPI,IAAAA,IAAI,EAAEZ,IAAI,CAACa,IAAL,CAAUV,KAAK,CAACW,SAAhB,EAA2B,KAA3B,CADC;AAEPC,IAAAA,UAAU,EAAE;AAFL;AAHR,CANc,EAad;AACDR,EAAAA,MAAM,EAAE,OADP;AAEDI,EAAAA,MAAM,EAAE,CAACR,KAAK,CAACa,KAFd;AAGDR,EAAAA,OAAO,EAAE;AACPS,IAAAA,KAAK,EAAEf;AADA;AAHR,CAbc,EAmBd;AACDK,EAAAA,MAAM,EAAE,SADP;AAEDC,EAAAA,OAAO,EAAE;AACPU,IAAAA,cAAc,EAAE,IADT;AAEPC,IAAAA,KAAK,EAAE;AAFA;AAFR,CAnBc,EAyBd;AACDZ,EAAAA,MAAM,EAAE,QADP;AAEDC,EAAAA,OAAO,EAAE;AAFR,CAzBc,EA4Bd,OA5Bc,EA4BL,YA5BK,CAAjB",
+    "sourcesContent": [
+        "\"use strict\";\n\nconst path = require('path');\n\nconst isDev = think.env === 'development';\nmodule.exports = [{\n  handle: 'meta',\n  options: {\n    logRequest: isDev,\n    sendResponseTime: isDev\n  }\n}, {\n  handle: 'resource',\n  enable: isDev,\n  options: {\n    root: path.join(think.ROOT_PATH, 'www'),\n    publicPath: /^\\/(static|favicon\\.ico)/\n  }\n}, {\n  handle: 'trace',\n  enable: !think.isCli,\n  options: {\n    debug: isDev\n  }\n}, {\n  handle: 'payload',\n  options: {\n    keepExtensions: true,\n    limit: '5mb'\n  }\n}, {\n  handle: 'router',\n  options: {}\n}, 'logic', 'controller'];\n//# sourceMappingURL=middleware.js.map"
+    ],
+    "file": "middleware.js"
+}

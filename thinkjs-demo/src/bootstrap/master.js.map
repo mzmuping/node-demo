@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "sources": [
+        "master.js"
+    ],
+    "names": [],
+    "mappings": "AAAA;AACA",
+    "sourcesContent": [
+        "// invoked in master\n\"use strict\";\n//# sourceMappingURL=master.js.map"
+    ],
+    "file": "master.js"
+}

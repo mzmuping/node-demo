@@ -1,0 +1,11 @@
+"use strict";
+
+const Base = require('./base.js');
+
+module.exports = class extends Base {
+  indexAction() {
+    this.body = 'hello world!';
+  }
+
+};
+//# sourceMappingURL=user.js.map

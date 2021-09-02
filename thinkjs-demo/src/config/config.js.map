@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "sources": [
+        "config.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "workers"
+    ],
+    "mappings": "AAAA,a,CAAc;;AAEdA,MAAM,CAACC,OAAP,GAAiB;AACfC,EAAAA,OAAO,EAAE;AADM,CAAjB",
+    "sourcesContent": [
+        "\"use strict\"; // default config\n\nmodule.exports = {\n  workers: 1\n};\n//# sourceMappingURL=config.js.map"
+    ],
+    "file": "config.js"
+}

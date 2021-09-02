@@ -1,0 +1,25 @@
+{
+    "version": 3,
+    "sources": [
+        "base.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Controller",
+        "__before",
+        "header",
+        "__call",
+        "method",
+        "http",
+        "toLowerCase",
+        "setCorsHeader",
+        "end"
+    ],
+    "mappings": "AAAA;AACA;;AAEAA,MAAM,CAACC,OAAP,GAAiB,cAAcC,KAAK,CAACC,UAApB,CAA+B;AAC9CC,EAAAA,QAAQ,GAAG;AACT;AACA,SAAKC,MAAL,CAAY,6BAAZ,EAA2C,KAAKA,MAAL,CAAY,QAAZ,KAAyB,GAApE;AACA,SAAKA,MAAL,CAAY,8BAAZ,EAA4C,kBAA5C;AACA,SAAKA,MAAL,CAAY,+BAAZ,EAA6C,qBAA7C;AACA,SAAKA,MAAL,CAAY,kCAAZ,EAAgD,MAAhD;AACD;;AAEDC,EAAAA,MAAM,GAAG;AACP,UAAMC,MAAM,GAAG,KAAKC,IAAL,CAAUD,MAAV,CAAiBE,WAAjB,EAAf;;AAEA,QAAIF,MAAM,KAAK,SAAf,EAA0B;AACxB,WAAKG,aAAL;AACA,WAAKC,GAAL;AACA;AACD;;AAED,SAAKD,aAAL;AACA,WAAO,MAAMJ,MAAN,EAAP;AACD;;AAEDI,EAAAA,aAAa,GAAG;AACd,SAAKL,MAAL,CAAY,6BAAZ,EAA2C,KAAKA,MAAL,CAAY,QAAZ,KAAyB,GAApE;AACA,SAAKA,MAAL,CAAY,8BAAZ,EAA4C,kBAA5C;AACA,SAAKA,MAAL,CAAY,+BAAZ,EAA6C,qBAA7C;AACA,SAAKA,MAAL,CAAY,kCAAZ,EAAgD,MAAhD;AACD;;AA3B6C,CAAhD",
+    "sourcesContent": [
+        "\"use strict\";\n/* eslint-disable no-console */\n\nmodule.exports = class extends think.Controller {\n  __before() {\n    // 跨域处理\n    this.header('Access-Control-Allow-Origin', this.header('origin') || '*');\n    this.header('Access-Control-Allow-Headers', 'x-requested-with');\n    this.header('Access-Control-Request-Method', 'GET,POST,PUT,DELETE');\n    this.header('Access-Control-Allow-Credentials', 'true');\n  }\n\n  __call() {\n    const method = this.http.method.toLowerCase();\n\n    if (method === 'options') {\n      this.setCorsHeader();\n      this.end();\n      return;\n    }\n\n    this.setCorsHeader();\n    return super.__call();\n  }\n\n  setCorsHeader() {\n    this.header('Access-Control-Allow-Origin', this.header('origin') || '*');\n    this.header('Access-Control-Allow-Headers', 'x-requested-with');\n    this.header('Access-Control-Request-Method', 'GET,POST,PUT,DELETE');\n    this.header('Access-Control-Allow-Credentials', 'true');\n  }\n\n};\n//# sourceMappingURL=base.js.map"
+    ],
+    "file": "base.js"
+}

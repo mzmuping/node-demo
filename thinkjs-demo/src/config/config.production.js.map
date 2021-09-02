@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "sources": [
+        "config.production.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "workers"
+    ],
+    "mappings": "AAAA,a,CAAc;;AAEdA,MAAM,CAACC,OAAP,GAAiB;AACfC,EAAAA,OAAO,EAAE;AADM,CAAjB",
+    "sourcesContent": [
+        "\"use strict\"; // production config, it will load in production enviroment\n\nmodule.exports = {\n  workers: 0\n};\n//# sourceMappingURL=config.production.js.map"
+    ],
+    "file": "config.production.js"
+}

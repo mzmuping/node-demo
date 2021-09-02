@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "sources": [
+        "worker.js"
+    ],
+    "names": [],
+    "mappings": "AAAA;AACA",
+    "sourcesContent": [
+        "// invoked in worker\n\"use strict\";\n//# sourceMappingURL=worker.js.map"
+    ],
+    "file": "worker.js"
+}

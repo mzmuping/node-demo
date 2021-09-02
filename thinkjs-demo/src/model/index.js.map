@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "sources": [
+        "index.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Model"
+    ],
+    "mappings": "AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiB,cAAcC,KAAK,CAACC,KAApB,CAA0B,EAA3C",
+    "sourcesContent": [
+        "\"use strict\";\n\nmodule.exports = class extends think.Model {};\n//# sourceMappingURL=index.js.map"
+    ],
+    "file": "index.js"
+}

@@ -1,0 +1,26 @@
+{
+    "version": 3,
+    "sources": [
+        "mongo.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "getListAction",
+        "console",
+        "log",
+        "method",
+        "user",
+        "mongo",
+        "data",
+        "select",
+        "success"
+    ],
+    "mappings": "AAAA;AACA;;AAEA,MAAMA,IAAI,GAAGC,OAAO,CAAC,WAAD,CAApB;;AAEAC,MAAM,CAACC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AACf,QAAbI,aAAa,GAAG;AACpBC,IAAAA,OAAO,CAACC,GAAR,CAAY,KAAKC,MAAjB;AACA,UAAMC,IAAI,GAAG,KAAKC,KAAL,CAAW,MAAX,CAAb,CAFoB,CAEa;;AAEjC,UAAMC,IAAI,GAAG,MAAMF,IAAI,CAACG,MAAL,EAAnB;AACA,WAAO,KAAKC,OAAL,CAAaF,IAAb,CAAP;AACD;;AAPiC,CAApC",
+    "sourcesContent": [
+        "\"use strict\";\n/* eslint-disable no-console */\n\nconst Base = require('./base.js');\n\nmodule.exports = class extends Base {\n  async getListAction() {\n    console.log(this.method);\n    const user = this.mongo('site'); // controller 里实例化模型\n\n    const data = await user.select();\n    return this.success(data);\n  }\n\n};\n//# sourceMappingURL=mongo.js.map"
+    ],
+    "file": "mongo.js"
+}

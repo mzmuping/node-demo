@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "sources": [
+        "router.js"
+    ],
+    "names": [
+        "module",
+        "exports"
+    ],
+    "mappings": "AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiB,EAAjB",
+    "sourcesContent": [
+        "\"use strict\";\n\nmodule.exports = [];\n//# sourceMappingURL=router.js.map"
+    ],
+    "file": "router.js"
+}

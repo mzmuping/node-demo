@@ -1,0 +1,18 @@
+{
+    "version": 3,
+    "sources": [
+        "index.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Logic",
+        "indexAction"
+    ],
+    "mappings": "AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiB,cAAcC,KAAK,CAACC,KAApB,CAA0B;AACzCC,EAAAA,WAAW,GAAG,CAAE;;AADyB,CAA3C",
+    "sourcesContent": [
+        "\"use strict\";\n\nmodule.exports = class extends think.Logic {\n  indexAction() {}\n\n};\n//# sourceMappingURL=index.js.map"
+    ],
+    "file": "index.js"
+}

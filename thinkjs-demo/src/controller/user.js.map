@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "sources": [
+        "user.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "body"
+    ],
+    "mappings": "AAAA;;AAEA,MAAMA,IAAI,GAAGC,OAAO,CAAC,WAAD,CAApB;;AAEAC,MAAM,CAACC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAClCI,EAAAA,WAAW,GAAG;AACZ,SAAKC,IAAL,GAAY,cAAZ;AACD;;AAHiC,CAApC",
+    "sourcesContent": [
+        "\"use strict\";\n\nconst Base = require('./base.js');\n\nmodule.exports = class extends Base {\n  indexAction() {\n    this.body = 'hello world!';\n  }\n\n};\n//# sourceMappingURL=user.js.map"
+    ],
+    "file": "user.js"
+}

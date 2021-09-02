@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "sources": [
+        "user.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Mongo",
+        "getList",
+        "field",
+        "select"
+    ],
+    "mappings": "AAAA,a,CAAc;;AAEdA,MAAM,CAACC,OAAP,GAAiB,cAAcC,KAAK,CAACC,KAApB,CAA0B;AACzCC,EAAAA,OAAO,GAAG;AACR,WAAO,KAAKC,KAAL,CAAW,MAAX,EAAmBC,MAAnB,EAAP;AACD;;AAHwC,CAA3C",
+    "sourcesContent": [
+        "\"use strict\"; // src/model/user.js\n\nmodule.exports = class extends think.Mongo {\n  getList() {\n    return this.field('site').select();\n  }\n\n};\n//# sourceMappingURL=user.js.map"
+    ],
+    "file": "user.js"
+}
