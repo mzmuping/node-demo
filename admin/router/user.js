@@ -4,19 +4,23 @@ const router = express.Router();
 const $sql = require('../sqlMap');
 const { responseClient, md5 } = require('../util');
 const query = require('../query');
-
+const { setToken } = require('../jwt');
+const cons = require('consolidate');
 
 router.post('/login', (req, res) => {
 
     let { userName, password } = req.body;
     password = md5(password)
-    query($sql.user.check, [userName, password]).then((results) => {
+    query($sql.user.check, [userName, password]).then(async (results) => {
 
         if (results.length === 0) {
             return responseClient(res, 200, 0, '账号错误或者密码错误')
         }
+        let token = await setToken({ userName, password });
+
         responseClient(res, 200, 1, '操作成功', {
-            userName: results[0].userName
+            userName: results[0].userName,
+            token
         })
     }).catch(err => {
         console.log('err', err);

@@ -20,7 +20,7 @@ router.get('/list', (req, res) => {
         responseClient(res, 200, 1, '操作成功', info)
     }).catch(err => {
         console.log(err)
-        responseClient(res, 200, 3, '获取失败')
+        responseClient(res, 500, 3, '获取失败')
     })
 });
 
@@ -32,7 +32,7 @@ router.post('/add', (req, res) => {
         responseClient(res, 200, 1, '操作成功')
     }).catch(err => {
         console.log(err)
-        responseClient(res, 200, 3, "插入失败")
+        responseClient(res, 500, 3, "插入失败")
     })
 });
 

@@ -6,7 +6,8 @@ module.exports = {
         let md5 = crypto.createHash('md5');
         return md5.update(pwd).digest('hex');
     },
-    responseClient(res, httpCode = 500, code = 3, msg = '服务端异常', data = {}) {
+    secretKey: 'yichen_qingting_jwttoken',
+    responseClient(res, httpCode = 200, code = 3, msg = '服务端异常', data = {}) {
         /**
          * res： 请求response
          * code 值：
