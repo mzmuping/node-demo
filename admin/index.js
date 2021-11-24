@@ -10,6 +10,7 @@ const config = require('./config');
 
 const userRouter = require('./router/user');
 const companyRouter = require('./router/company');
+const sequelizeRouter = require('./router/sequelize');
 const cons = require('consolidate');
 
 const app = express();
@@ -36,7 +37,6 @@ app.use(async (req, res, next) => {
         return next(); // 找到是白名单的，直接放行，不需要验证
     }
     let authorization = req.headers.authorization
-    console.log(authorization, req.headers)
     if (authorization) {
         // 解码 token (验证 secret 和检查有效期（exp）)
         var parts = authorization.split(' ');
@@ -47,7 +47,6 @@ app.use(async (req, res, next) => {
             next()
         } else {
             responseClient(res, 200, 401, "token失效")
-
         }
     } else {
         responseClient(res, 200, 3, '没有找到token')
@@ -56,6 +55,7 @@ app.use(async (req, res, next) => {
 })
 app.use('/user', userRouter);
 app.use('/company', companyRouter)
+app.use('/sequelize', sequelizeRouter)
 console.log('app===', Object.prototype.toString.call(app))
 app.listen(config.app.port, () => {
     console.log(`app listening at http://localhost:${config.app.port}`);

@@ -13,7 +13,7 @@ const https = require('https');
 const fs = require('fs');
 const pathLib = require('path')
 const consolidate = require('consolidate');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const userRouter = express.Router()
 const authRouter = express.Router()
 

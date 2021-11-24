@@ -5,6 +5,7 @@ const query = require('../query');
 const $sql = require('../sqlMap');
 const { responseClient, md5 } = require('../util');
 
+
 router.get('/list', (req, res) => {
     console.log(req.query);
     let page = req.query.current ? req.query.current : 1;
