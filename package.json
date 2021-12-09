@@ -2,6 +2,7 @@
   "scripts": {
     "start": "nodemon admin/index.js",
     "test": "nodemon admin/router/test.js",
+    "tran": "nodemon video_transcoding/index.js",
     "pm2": "pm2 start -mode=admin admin/index.js"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "express": "^4.17.1",
     "express-jwt": "^6.1.0",
     "express-static": "^1.2.6",
+    "fluent-ffmpeg": "^2.1.2",
     "jade": "^1.11.0",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.3",

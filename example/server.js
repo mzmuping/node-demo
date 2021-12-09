@@ -142,6 +142,5 @@ authRouter.get('/list', (req, res) => {
 
 
 //4.static 数据
-server.use(static(__dirname, './www'))
-server.use('/s', express.static('views'))
-
+server.use('/w', static(pathLib.join(__dirname, 'www')))
+server.use('/v', static(pathLib.join(__dirname, 'views')));
