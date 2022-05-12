@@ -1,4 +1,10 @@
 {
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "start": "nodemon admin/index.js",
     "test": "nodemon admin/router/test.js",
